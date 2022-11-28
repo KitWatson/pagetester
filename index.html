@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <body>
+ <script>
+function getMemberCounts(url, target){
+	jQuery.getJSON(url, function( json ) {
+		var count = json;
+		jQuery(target).text(count);
+	});
+}
+</script>
 <h1>Hello World</h1>
 <p>I'm hosted with GitHub Pages.</p>
 
@@ -10,5 +18,9 @@ Click me to display Date and Time.</button>
 
 <p id="demo"></p>
 
+<script>
+	getMemberCounts("/wp-content/themes/blankslate/member_visits_v2/mount-hawthorn.json", "#mount-hawthorn-number");
+</script>
+<span id="mount-hawthorn-number"/>
 </body>
 </html>
