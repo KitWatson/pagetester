@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
 
-  <head>
-    <script src="jquery-3.6.1.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-if (typeof $ == 'undefined') {
-   var $ = jQuery;
-}
-</script>
-  </head>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
 
-  <body onload="">
-    <script>
-      function getMemberCounts(url, target) {
-         $.getJSON(url, function(json) {
-          var count = json;
-          console.log(count);
-          jQuery(target).text(count);
-        }); 
-      }
+<p id="demo"></p>
 
-    </script>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-
-    <button type="button" onclick="getMemberCounts('https://revofitness.com.au/wp-content/themes/blankslate/member_visits_v2/mount-hawthorn.json', '#mount-hawthorn-number');">
-      Click me to display live count.</button>
-
-<span id="mount-hawthorn-number" > Here </span>
-  </body>
-
+</body>
 </html>
